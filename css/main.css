@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+    color: white;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: hsl(217, 54%, 11%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.card {
+    height: fit-content;
+    width: 350px;
+    background-color: hsl(216, 50%, 16%);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.card .img-wrapper {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    border-radius: inherit;
+    overflow: hidden;
+}
+
+.card .img-wrapper .nft-preview-img {
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    background: hsl(178, 100%, 50%);
+}
+
+.card .nft-description-wrapper {
+    margin: 15px 0;
+}
+
+.card .nft-description-wrapper h3 {
+    font-weight: 500;
+}
+
+.card .nft-description-wrapper > p {
+    margin-top: 15px;
+    color: hsl(215, 51%, 70%);
+}
+
+.card .nft-description-wrapper .nft-tag-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.card .nft-description-wrapper .nft-tag-wrapper > p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card .nft-description-wrapper .nft-tag-wrapper .price-tag {
+    color: hsl(178, 100%, 50%);
+}
+
+.card .nft-description-wrapper .nft-tag-wrapper .timer-tag {
+    color: hsl(215, 51%, 70%);
+}
+
+.card .creator-cred::before {
+    content: '';
+    position: absolute;
+    bottom: 55px;
+    height: 1px;
+    width: 100%;
+    background-color: hsl(215, 32%, 27%);
+}
+
+.card .creator-cred {
+    position: relative;
+    font-size: 16px;
+    font-weight: 300;
+    color: hsl(215, 51%, 70%);
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    white-space: pre;
+}
+
+.card .creator-cred img {
+    width: 30px;
+    margin-right: 15px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.card .creator-cred span {
+    color: white;
+}
+
+.attribution {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: hsl(215, 51%, 70%);
+}
+
+.attribution a:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+/* HOVER STATES */
+.card .img-wrapper:hover::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    background: hsl(178, 100%, 50%);
+    opacity: .5;
+}
+
+.card .img-wrapper:hover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.card .nft-description-wrapper h3:hover,
+.card .creator-cred span:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
